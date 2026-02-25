@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beauty HH Parser - Контакты</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/" class="logo">
+                <i class="fas fa-cut"></i>
+                Beauty HH Parser
+            </a>
+            <ul class="nav-links">
+                <li><a href="/">Главная</a></li>
+                <li><a href="/data">Поиск</a></li>
+                <li><a href="/info" class="active">Контакты</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="developer-card card fade-in">
+            <div class="developer-avatar">
+                <i class="fas fa-user-circle"></i>
+            </div>
+            <div class="developer-info">
+                <h3>Иван Петров</h3>
+                <p>Full-stack разработчик, специалист по парсингу данных</p>
+                
+                <ul class="contact-list">
+                    <li>
+                        <i class="fas fa-envelope"></i>
+                        <span>ivan.petrov@example.com</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-phone"></i>
+                        <span>+7 (999) 123-45-67</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-telegram"></i>
+                        <span>@ivan_dev</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-github"></i>
+                        <span>github.com/ivan-dev</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-linkedin"></i>
+                        <span>linkedin.com/in/ivan-petrov</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2 class="card-title">О проекте</h2>
+            <p><strong>Beauty HH Parser</strong> - это специализированный инструмент для поиска специалистов бьюти-индустрии на hh.ru.</p>
+            
+            <h3 style="margin: 1.5rem 0 1rem;">Технологии:</h3>
+            <ul style="margin-left: 20px; line-height: 2;">
+                <li><strong>Backend:</strong> Python, Flask, Requests</li>
+                <li><strong>Frontend:</strong> HTML5, CSS3, JavaScript</li>
+                <li><strong>API:</strong> hh.ru API</li>
+                <li><strong>Стили:</strong> Адаптивный дизайн, CSS Grid/Flexbox</li>
+            </ul>
+
+            <h3 style="margin: 1.5rem 0 1rem;">Возможности:</h3>
+            <ul style="margin-left: 20px; line-height: 2;">
+                <li>Поиск парикмахеров, универсалов, барберов</li>
+                <li>Фильтрация по городам и опыту работы</li>
+                <li>Экспорт результатов в CSV</li>
+                <li>Статистика по требованиям</li>
+                <li>Актуальные данные с hh.ru</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2 class="card-title">Обратная связь</h2>
+            <form id="contactForm" onsubmit="return false;">
+                <div class="form-group">
+                    <label for="name">Ваше имя:</label>
+                    <input type="text" class="form-control" id="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" class="form-control" id="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Сообщение:</label>
+                    <textarea class="form-control" id="message" rows="5" required></textarea>
+                </div>
+                
+                <button type="submit" class="btn btn-primary btn-block" onclick="showSuccess('Сообщение отправлено!')">
+                    Отправить сообщение
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Beauty HH Parser. Все права защищены.</p>
+    </footer>
+
+    <script src="/static/js/script.js"></script>
+</body>
+</html>

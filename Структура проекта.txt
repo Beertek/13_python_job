@@ -1,0 +1,17 @@
+beauty-hh-parser/
+│
+├── app.py                 # Основной файл Flask приложения
+├── hh_parser_beauty.py    # Модифицированный парсер для бьюти-индустрии
+├── requirements.txt       # Зависимости Python
+│
+├── static/
+│   ├── css/
+│   │   └── style.css      # Стили для всех страниц
+│   └── js/
+│       └── script.js      # JavaScript для интерактивности
+│
+└── templates/
+    ├── index.html         # Главная страница
+    ├── data.html          # Страница с формой поиска
+    ├── result.html        # Страница с результатами
+    └── info.html          # Страница контактов

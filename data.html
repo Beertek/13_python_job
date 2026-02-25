@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beauty HH Parser - Поиск</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/" class="logo">
+                <i class="fas fa-cut"></i>
+                Beauty HH Parser
+            </a>
+            <ul class="nav-links">
+                <li><a href="/">Главная</a></li>
+                <li><a href="/data" class="active">Поиск</a></li>
+                <li><a href="/info">Контакты</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="card fade-in">
+            <h1 class="card-title">Поиск специалистов</h1>
+            
+            <form id="searchForm" onsubmit="return false;">
+                <div class="form-group">
+                    <label for="profession">
+                        <i class="fas fa-cut"></i> Специальность:
+                    </label>
+                    <select class="form-control" id="profession" name="profession" required>
+                        <option value="парикмахер">Парикмахер</option>
+                        <option value="парикмахер-универсал" selected>Парикмахер-универсал</option>
+                        <option value="барбер">Барбер</option>
+                        <option value="колорист">Колорист</option>
+                        <option value="стилист">Стилист</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="city">
+                        <i class="fas fa-city"></i> Город:
+                    </label>
+                    <input type="text" class="form-control" id="city" name="city" value="Москва" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="experience">
+                        <i class="fas fa-briefcase"></i> Опыт работы:
+                    </label>
+                    <select class="form-control" id="experience" name="experience">
+                        <option value="">Любой опыт</option>
+                        <option value="no">Без опыта</option>
+                        <option value="1">От 1 года</option>
+                        <option value="3">От 3 лет</option>
+                        <option value="5">От 5 лет</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="salary_from">
+                        <i class="fas fa-ruble-sign"></i> Зарплата от:
+                    </label>
+                    <input type="number" class="form-control" id="salary_from" name="salary_from" placeholder="Например: 50000">
+                </div>
+
+                <div class="form-group">
+                    <label for="pages">
+                        <i class="fas fa-file"></i> Глубина поиска (страниц):
+                    </label>
+                    <input type="number" class="form-control" id="pages" name="pages" min="1" max="5" value="2">
+                </div>
+
+                <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                    <button type="submit" class="btn btn-primary" style="flex: 2;">
+                        <i class="fas fa-search"></i> Найти специалистов
+                    </button>
+                    <button type="button" class="btn btn-secondary" onclick="loadSearchSettings()" style="flex: 1;">
+                        <i class="fas fa-download"></i> Загрузить
+                    </button>
+                    <button type="button" class="btn btn-secondary" onclick="saveSearchSettings()" style="flex: 1;">
+                        <i class="fas fa-save"></i> Сохранить
+                    </button>
+                    <button type="button" class="btn btn-secondary" onclick="clearForm()" style="flex: 1;">
+                        <i class="fas fa-eraser"></i> Очистить
+                    </button>
+                </div>
+            </form>
+        </div>
+
+        <div class="card">
+            <h2 class="card-title">Советы по поиску</h2>
+            <ul style="margin-left: 20px; line-height: 2;">
+                <li>Для поиска <strong>парикмахеров-универсалов</strong> используйте соответствующую опцию</li>
+                <li>Введите конкретный город для более точных результатов</li>
+                <li>Укажите желаемую зарплату для фильтрации</li>
+                <li>Чем больше страниц поиска, тем больше результатов, но дольше ожидание</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="loader" class="loader">
+        <div class="spinner"></div>
+        <p>Поиск специалистов... Это может занять до 30 секунд</p>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Beauty HH Parser. Все права защищены.</p>
+    </footer>
+
+    <script src="/static/js/script.js"></script>
+</body>
+</html>

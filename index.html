@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beauty HH Parser - Главная</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/" class="logo">
+                <i class="fas fa-cut"></i>
+                Beauty HH Parser
+            </a>
+            <ul class="nav-links">
+                <li><a href="/" class="active">Главная</a></li>
+                <li><a href="/data">Поиск</a></li>
+                <li><a href="/info">Контакты</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="card fade-in">
+            <h1 class="card-title">Добро пожаловать в Beauty HH Parser!</h1>
+            <p>Ваш надежный помощник в поиске специалистов бьюти-индустрии на hh.ru</p>
+        </div>
+
+        <div class="stats-grid">
+            <div class="stat-card">
+                <i class="fas fa-cut fa-3x"></i>
+                <div class="stat-value">1000+</div>
+                <div class="stat-label">Найдено специалистов</div>
+            </div>
+            <div class="stat-card">
+                <i class="fas fa-city fa-3x"></i>
+                <div class="stat-value">15+</div>
+                <div class="stat-label">Городов</div>
+            </div>
+            <div class="stat-card">
+                <i class="fas fa-clock fa-3x"></i>
+                <div class="stat-value">24/7</div>
+                <div class="stat-label">Актуальные данные</div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2 class="card-title">Как это работает?</h2>
+            <ol style="margin-left: 20px; line-height: 2;">
+                <li>Перейдите на страницу <strong>«Поиск»</strong></li>
+                <li>Укажите интересующую вас специальность (парикмахер, барбер, универсал и т.д.)</li>
+                <li>Выберите город для поиска</li>
+                <li>Укажите желаемый опыт работы и зарплату</li>
+                <li>Нажмите «Найти специалистов»</li>
+                <li>Получите таблицу с актуальными вакансиями с hh.ru</li>
+            </ol>
+        </div>
+
+        <div class="card">
+            <h2 class="card-title">Что мы ищем?</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
+                <div style="text-align: center; padding: 1rem;">
+                    <i class="fas fa-cut fa-3x" style="color: var(--primary-color);"></i>
+                    <h3>Парикмахеры</h3>
+                </div>
+                <div style="text-align: center; padding: 1rem;">
+                    <i class="fas fa-star fa-3x" style="color: var(--primary-color);"></i>
+                    <h3>Универсалы</h3>
+                </div>
+                <div style="text-align: center; padding: 1rem;">
+                    <i class="fas fa-male fa-3x" style="color: var(--primary-color);"></i>
+                    <h3>Барберы</h3>
+                </div>
+                <div style="text-align: center; padding: 1rem;">
+                    <i class="fas fa-paint-brush fa-3x" style="color: var(--primary-color);"></i>
+                    <h3>Колористы</h3>
+                </div>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin: 2rem 0;">
+            <a href="/data" class="btn btn-primary btn-block" style="max-width: 300px; margin: 0 auto;">
+                <i class="fas fa-search"></i> Начать поиск
+            </a>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Beauty HH Parser. Все права защищены.</p>
+    </footer>
+
+    <script src="/static/js/script.js"></script>
+</body>
+</html>
