@@ -1,0 +1,14 @@
+beauty-hh-parser/
+├── app.py
+├── hh_parser_beauty.py
+├── requirements.txt
+├── static/
+│   ├── css/
+│   │   └── style.css
+│   └── js/
+│       └── script.js
+└── templates/
+    ├── index.html
+    ├── data.html
+    ├── result.html
+    └── info.html

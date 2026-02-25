@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beauty HH Parser - Результаты</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/" class="logo">
+                <i class="fas fa-cut"></i>
+                Beauty HH Parser
+            </a>
+            <ul class="nav-links">
+                <li><a href="/">Главная</a></li>
+                <li><a href="/data">Поиск</a></li>
+                <li><a href="/info">Контакты</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        {% if results %}
+        <div class="card fade-in">
+            <h1 class="card-title">Результаты поиска</h1>
+            <p>Найдено специалистов: <strong>{{ results|length }}</strong></p>
+            
+            <div style="margin: 1rem 0; display: flex; gap: 1rem; flex-wrap: wrap;">
+                <input type="text" class="form-control" id="tableSearch" onkeyup="filterTable()" 
+                       placeholder="🔍 Поиск в таблице..." style="flex: 2;">
+                <button onclick="exportToCSV()" class="btn btn-success" style="flex: 1;">
+                    <i class="fas fa-file-excel"></i> Экспорт в CSV
+                </button>
+            </div>
+        </div>
+
+        <div id="statsContainer" class="fade-in"></div>
+
+        <div class="card">
+            <div class="table-container">
+                <table id="resultsTable">
+                    <thead>
+                        <tr>
+                            <th onclick="sortTable(0)">Имя <i class="fas fa-sort"></i></th>
+                            <th onclick="sortTable(1)">Телефон <i class="fas fa-sort"></i></th>
+                            <th onclick="sortTable(2)">Email <i class="fas fa-sort"></i></th>
+                            <th onclick="sortTable(3)">Специальность <i class="fas fa-sort"></i></th>
+                            <th onclick="sortTable(4)">Опыт <i class="fas fa-sort"></i></th>
+                            <th onclick="sortTable(5)">Зарплата <i class="fas fa-sort"></i></th>
+                            <th>Компания</th>
+                            <th>Адрес</th>
+                            <th>График</th>
+                            <th>Дата</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for specialist in results %}
+                        <tr>
+                            <td>{{ specialist.name }}</td>
+                            <td>
+                                {% if specialist.phone != 'Не указан' %}
+                                <a href="tel:{{ specialist.phone }}">{{ specialist.phone }}</a>
+                                {% else %}
+                                {{ specialist.phone }}
+                                {% endif %}
+                            </td>
+                            <td>
+                                {% if specialist.email != 'Не указан' %}
+                                <a href="mailto:{{ specialist.email }}">{{ specialist.email }}</a>
+                                {% else %}
+                                {{ specialist.email }}
+                                {% endif %}
+                            </td>
+                            <td>{{ specialist.specialty }}</td>
+                            <td>{{ specialist.experience }}</td>
+                            <td>
+                                {% if specialist.salary_from %}
+                                    {% if specialist.salary_to %}
+                                        {{ specialist.salary_from|int }} - {{ specialist.salary_to|int }} {{ specialist.currency }}
+                                    {% else %}
+                                        от {{ specialist.salary_from|int }} {{ specialist.currency }}
+                                    {% endif %}
+                                {% else %}
+                                    Не указана
+                                {% endif %}
+                            </td>
+                            <td>{{ specialist.company }}</td>
+                            <td>{{ specialist.address }}</td>
+                            <td>{{ specialist.schedule }}</td>
+                            <td>{{ specialist.published_at }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin: 2rem 0;">
+            <a href="/data" class="btn btn-primary">
+                <i class="fas fa-search"></i> Новый поиск
+            </a>
+        </div>
+
+        {% else %}
+        <div class="card fade-in">
+            <h1 class="card-title">Результаты не найдены</h1>
+            <p>Попробуйте изменить параметры поиска</p>
+            <div style="text-align: center; margin: 2rem 0;">
+                <a href="/data" class="btn btn-primary">
+                    <i class="fas fa-arrow-left"></i> Вернуться к поиску
+                </a>
+            </div>
+        </div>
+        {% endif %}
+    </div>
+
+    <div id="loader" class="loader">
+        <div class="spinner"></div>
+        <p>Загрузка статистики...</p>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Beauty HH Parser. Все права защищены.</p>
+    </footer>
+
+    <script src="/static/js/script.js"></script>
+</body>
+</html>
