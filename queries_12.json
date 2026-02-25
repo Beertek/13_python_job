@@ -1,0 +1,32 @@
+[
+  {
+    "text": "python developer",
+    "area": "Москва",
+    "pages": 5
+  },
+  {
+    "text": "java developer",
+    "area": "Москва",
+    "pages": 5
+  },
+  {
+    "text": "frontend developer",
+    "area": "Санкт-Петербург",
+    "pages": 3
+  },
+  {
+    "text": "data scientist",
+    "area": "Москва",
+    "pages": 3
+  },
+  {
+    "text": "devops engineer",
+    "area": "Москва",
+    "pages": 3
+  },
+  {
+    "text": "жестянщик",
+    "area": "Москва",
+    "pages": 2
+  }
+]

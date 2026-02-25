@@ -1,0 +1,110 @@
+[
+  {
+    "keywords": "python developer",
+    "area": "Москва",
+    "count": 156,
+    "average_salary": 185000,
+    "salary_stats": {
+      "min": 80000,
+      "max": 450000,
+      "avg": 185000
+    },
+    "requirements": [
+      {
+        "name": "python",
+        "count": 148,
+        "percent": 24.5
+      },
+      {
+        "name": "django",
+        "count": 112,
+        "percent": 18.5
+      },
+      {
+        "name": "git",
+        "count": 98,
+        "percent": 16.2
+      },
+      {
+        "name": "sql",
+        "count": 76,
+        "percent": 12.6
+      },
+      {
+        "name": "flask",
+        "count": 45,
+        "percent": 7.4
+      },
+      {
+        "name": "fastapi",
+        "count": 38,
+        "percent": 6.3
+      },
+      {
+        "name": "docker",
+        "count": 35,
+        "percent": 5.8
+      },
+      {
+        "name": "postgresql",
+        "count": 32,
+        "percent": 5.3
+      },
+      {
+        "name": "английский",
+        "count": 22,
+        "percent": 3.6
+      },
+      {
+        "name": "linux",
+        "count": 18,
+        "percent": 3.0
+      }
+    ],
+    "date": "2025-02-26T10:30:00"
+  },
+  {
+    "keywords": "жестянщик",
+    "area": "Москва",
+    "count": 5,
+    "average_salary": 120000,
+    "salary_stats": {
+      "min": 80000,
+      "max": 180000,
+      "avg": 120000
+    },
+    "requirements": [
+      {
+        "name": "опыт работы",
+        "count": 5,
+        "percent": 22.7
+      },
+      {
+        "name": "слесарные работы",
+        "count": 4,
+        "percent": 18.2
+      },
+      {
+        "name": "ремонт",
+        "count": 4,
+        "percent": 18.2
+      },
+      {
+        "name": "металл",
+        "count": 3,
+        "percent": 13.6
+      },
+      {
+        "name": "ответственность",
+        "count": 3,
+        "percent": 13.6
+      },
+      {
+        "name": "стрессоустойчивость",
+        "count": 3,
+        "percent": 13.6
+      }
+    ],
+    "date": "2025-02-26T10:35:00"
+  }
+]
